@@ -32,7 +32,7 @@ curl -H "Content-Type:application/gzip" \
      "$upload_url?name=$(basename "$ASSET1")&access_token=$GITHUB_TOKEN"
 
 curl -H "Content-Type:application/yaml" \
-     --data-binary "@$SWAGGER_ASSET" \
+     --data-binary "@$ASSET2" \
      "$upload_url?name=$(basename "$ASSET2")&access_token=$GITHUB_TOKEN"
 
 # 3. publish the release to trigger a new webhook for app-version-manager that includes the uploaded
